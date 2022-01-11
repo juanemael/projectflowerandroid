@@ -9,7 +9,7 @@ import android.widget.Toast;
 
 import android.os.Bundle;
 
-public class Login extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     Button btn_lregister, btn_llogin;
     EditText et_lusername, et_lpassword;
 
@@ -31,7 +31,7 @@ public class Login extends AppCompatActivity {
         btn_lregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
