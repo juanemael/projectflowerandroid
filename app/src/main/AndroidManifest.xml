@@ -10,9 +10,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectFlowerAndroid">
         <activity
+            android:name=".NavigationTemplateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".NavigationHomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity2"
-            android:exported="true" />
-        <!-- <activity -->
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <activity -->
         <!-- android:name=".MainMenuActivity" -->
         <!-- android:exported="true"> -->
         <!-- <intent-filter> -->
@@ -24,11 +35,13 @@
             android:name=".LoginActivity"
             android:exported="true"
             android:label="@string/app_name">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
         </activity>
     </application>
 
