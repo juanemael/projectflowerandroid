@@ -10,12 +10,20 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity2 extends AppCompatActivity {
+
+    private GridView gridViewFlower;
+    private FlowerAdapter flowerAdapter;
+    List<FlowerCatalog>  flowers = new ArrayList<FlowerCatalog>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +31,8 @@ public class MainActivity2 extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
 
         prepareListView();
+        gridViewFlower = (GridView) findViewById(R.id.gridViewFlower);
+        drawDatatoGridView();
     }
 
     private void prepareListView(){
@@ -39,6 +49,19 @@ public class MainActivity2 extends AppCompatActivity {
         recyclerView.setAdapter(customAdapter);
         recyclerView.setLayoutManager(layoutManager);
 
+    }
+
+    private void drawDatatoGridView() {
+        flowerAdapter = new FlowerAdapter(MainActivity2.this,
+                R.layout.activity_flower_catalog, flowers);
+        gridViewFlower.setAdapter(flowerAdapter);
+        gridViewFlower.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                FlowerCatalog flowerCatalog = (FlowerCatalog) parent.getAdapter().getItem(position);
+                Toast.makeText(getBaseContext(),"Flower Name :"+ flowerCatalog.getName(),Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
 
