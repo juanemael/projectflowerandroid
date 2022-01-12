@@ -4,8 +4,12 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Android_Project/semester7/project/projectflowerandroid/app/src/main/res/layout/activity_main_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/layout/activity_google_maps.xml" value="0.1381340579710145" />
+        <entry key="app/src/main/res/layout/activity_google_sign_in.xml" value="0.1381340579710145" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.32443812569908204" />
+        <entry key="app/src/main/res/layout/activity_maps.xml" value="0.14447463768115942" />
+        <entry key="app/src/main/res/layout/activity_maps2.xml" value="0.11354166666666667" />
         <entry key="app/src/main/res/layout/activity_navigation_home.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/layout/button_navigation_menu.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/wedding_flower.xml" value="0.18385416666666668" />
