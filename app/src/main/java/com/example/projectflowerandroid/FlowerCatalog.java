@@ -1,29 +1,29 @@
 package com.example.projectflowerandroid;
 
-import androidx.appcompat.app.AppCompatActivity;
+//import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class FlowerCatalog extends AppCompatActivity {
+public class FlowerCatalog {
     private String id="";
-    private String name="";
+    private String title="";
     private String image="";
-    private String price="";
+    private String subtitle="";
 
-    @Override
+    /*@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_flower_catalog);
-    }
+    }*/
 
-    public FlowerCatalog (String id, String name, String image, String price) {
+    public FlowerCatalog (String id, String title, String image, String subtitle) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.image = image;
-        this.price = price;
+        this.subtitle = subtitle;
     }
 
-    private FlowerCatalog() {
+    public FlowerCatalog() {
     }
 
     public String getId() {
@@ -34,12 +34,12 @@ public class FlowerCatalog extends AppCompatActivity {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getImage() {
@@ -50,11 +50,11 @@ public class FlowerCatalog extends AppCompatActivity {
         this.image = image;
     }
 
-    public String getPrice() {
-        return price;
+    public String getSubtitle() {
+        return subtitle;
     }
 
-    public void setPrice(String price) {
-        this.price = price;
+    public void setSubtitle(String subtitle) {
+        this.subtitle = subtitle;
     }
 }

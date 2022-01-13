@@ -1,28 +1,21 @@
 package com.example.projectflowerandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
-import android.content.Context;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class MainActivity2 extends AppCompatActivity {
 
     private GridView gridViewFlower;
-    private FlowerAdapter flowerAdapter;
+    private FlowerCatalogAdapter flowerAdapter;
     List<FlowerCatalog>  flowers = new ArrayList<FlowerCatalog>();
 
     @Override
@@ -30,11 +23,36 @@ public class MainActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
 
-        prepareListView();
+        //prepareListView();
         gridViewFlower = (GridView) findViewById(R.id.gridViewFlower);
+        initData();
         drawDatatoGridView();
     }
 
+    private void initData() {
+        List<String> bouquet = Arrays.asList("babyshowerflower", "funeralflower", "graduationflower", "weddingflower");
+        List<String> desc = Arrays.asList("flowers for baby shower", "flowers for funeral", "flowers for graduation", "flowers for wedding");
+        for (int i=0; i<bouquet.size(); i++) {
+            int id= i+1;
+            //int price = id * 1000;
+            flowers.add(new FlowerCatalog(id + "", bouquet.get(i), bouquet.get(i), desc.get(i) + ""));
+        }
+    }
+
+    private void drawDatatoGridView() {
+        flowerAdapter = new FlowerCatalogAdapter(MainActivity2.this,
+                R.layout.activity_flower_catalog, flowers);
+        gridViewFlower.setAdapter(flowerAdapter);
+        gridViewFlower.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                FlowerCatalog flowerCatalog = (FlowerCatalog) parent.getAdapter().getItem(position);
+                Toast.makeText(getBaseContext(),"Flower Name :"+ flowerCatalog.getTitle(),Toast.LENGTH_SHORT).show();
+            }
+        });
+    }
+
+    /*
     private void prepareListView(){
         RecyclerView recyclerView = findViewById(R.id.activity_main2_recycler_view);
         ArrayList<FlowerData> flowerData = new ArrayList<>();
@@ -50,21 +68,10 @@ public class MainActivity2 extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
 
     }
+    */
 
-    private void drawDatatoGridView() {
-        flowerAdapter = new FlowerAdapter(MainActivity2.this,
-                R.layout.activity_flower_catalog, flowers);
-        gridViewFlower.setAdapter(flowerAdapter);
-        gridViewFlower.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                FlowerCatalog flowerCatalog = (FlowerCatalog) parent.getAdapter().getItem(position);
-                Toast.makeText(getBaseContext(),"Flower Name :"+ flowerCatalog.getName(),Toast.LENGTH_SHORT).show();
-            }
-        });
-    }
 }
-
+/*
 class CustomAdapter extends RecyclerView.Adapter<CustomViewHolder> {
 
     ArrayList<FlowerData> flowerData;
@@ -131,19 +138,18 @@ class FlowerData {
         this.title = title;
     }*/
 
-    public String getSubTitle() {
+    /*public String getSubTitle() {
         return subTitle;
-    }
+    }*/
 
     /*public void setSubTitle(String subTitle) {
         this.subTitle = subTitle;
     }*/
 
-    public int getImageId() {
+    /*public int getImageId() {
         return imageId;
-    }
+    }*/
 
     /*public void setImageId(int ImageId) {
         this.imageId = imageId;
     }*/
-}

@@ -19,14 +19,14 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:text="Bouquet Name"
-        android:id="@+id/textViewName"
+        android:id="@+id/textViewTitle"
         android:gravity="center" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Price"
-        android:id="@+id/textViewPrice"
+        android:text="Description"
+        android:id="@+id/textViewSubtitle"
         android:gravity="center" />
 
 </LinearLayout>

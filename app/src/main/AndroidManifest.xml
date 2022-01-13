@@ -13,23 +13,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectFlowerAndroid">
-        <activity
-            android:name=".FlowerAdapter"
-            android:exported="true" />
-        <activity
+        <!--<activity
+            android:name=".FlowerCatalogAdapter"
+            android:exported="true" />-->
+        <!-- <activity
             android:name=".FlowerCatalog"
-            android:exported="true" />
-        <activity
+            android:exported="true" /> -->
+       <!-- <activity
             android:name=".MainFragment"
-            android:exported="true" />
+            android:exported="true" /> -->
         <activity
             android:name=".LocationDataActivity"
             android:exported="true">
-            <intent-filter>
+            <!-- <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+            </intent-filter> -->
         </activity>
         <activity
             android:name=".LoginResultActivity"
@@ -74,12 +74,12 @@
             android:name=".MainActivity2"
             android:exported="true">
 
-            <!-- <intent-filter> -->
-            <!-- <action android:name="android.intent.action.MAIN" /> -->
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
 
 
-            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
-            <!-- </intent-filter> -->
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity> <!-- <activity -->
         <!-- android:name=".MainMenuActivity" -->
         <!-- android:exported="true"> -->

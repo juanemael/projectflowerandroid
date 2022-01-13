@@ -20,18 +20,18 @@ import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class FlowerAdapter extends ArrayAdapter<FlowerCatalog> {
+public class FlowerCatalogAdapter extends ArrayAdapter<FlowerCatalog> {
     Context context;
 
-    public FlowerAdapter(Context context, int resource, List<FlowerCatalog> flowers) {
+    public FlowerCatalogAdapter(Context context, int resource, List<FlowerCatalog> flowers) {
         super(context, resource, flowers);
         this.context = context;
     }
 
     /*private view holder class*/
     private class Viewholder {
-        TextView tvName;
-        TextView tvPrice;
+        TextView tvTitle;
+        TextView tvSubtitle;
         ImageView ivFlowerCatalog;
     }
 
@@ -44,20 +44,20 @@ public class FlowerAdapter extends ArrayAdapter<FlowerCatalog> {
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.activity_flower_catalog, null);
             holder = new Viewholder();
-            holder.tvName = (TextView) convertView.findViewById(R.id.textViewName);
-            holder.tvPrice = (TextView) convertView.findViewById(R.id.textViewPrice);
+            holder.tvTitle = (TextView) convertView.findViewById(R.id.textViewTitle);
+            holder.tvSubtitle = (TextView) convertView.findViewById(R.id.textViewSubtitle);
             holder.ivFlowerCatalog = (ImageView) convertView.findViewById(R.id.imageViewFlowerCatalog);
             convertView.setTag(holder);
         }else {
             holder = (Viewholder) convertView.getTag();
         }
-        holder.tvName.setText(fc.getName());
-        holder.tvPrice.setText("Rp" + fc.getPrice());
+        holder.tvTitle.setText(fc.getTitle());
+        holder.tvSubtitle.setText(fc.getSubtitle());
         int imageid = context.getResources().getIdentifier(fc.getImage(), "drawable", context.getPackageName());
         try {
             Picasso.get().load(imageid).fit().centerInside().into(holder.ivFlowerCatalog);
         }catch (Exception e) {
-            Log.d("TAG", "flower:" + fc.getName());
+            Log.d("TAG", "flower:" + fc.getTitle());
         }
         return convertView;
     }
