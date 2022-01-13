@@ -3,10 +3,14 @@ package com.example.projectflowerandroid;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.transition.Slide;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.GridView;
 import android.widget.Toast;
+
+import com.denzcoskun.imageslider.ImageSlider;
+import com.denzcoskun.imageslider.models.SlideModel;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -22,6 +26,14 @@ public class MainActivity2 extends NavigationTemplateActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+
+//        ImageSlider imageSlider = findViewById(R.id.image_slider);
+//
+//        List<SlideModel> slideModels = new ArrayList<>();
+//        slideModels.add(new SlideModel(R.drawable.funeralflower,"FuneraL Flower",null));
+//        slideModels.add(new SlideModel(R.drawable.graduationflower,"Flower",null));
+//        imageSlider.setImageList(slideModels);
 
         //prepareListView();
         gridViewFlower = (GridView) findViewById(R.id.gridViewFlower);

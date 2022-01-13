@@ -1,31 +1,57 @@
-<fragment xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:map="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/map2"
-    android:name="com.google.android.gms.maps.SupportMapFragment"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".LocationDataActivity">
-    <LinearLayout
+    xmlns:tools="http://schemas.android.com/tools" android:layout_height="match_parent"
+    android:layout_width="match_parent">
+
+
+
+
+    <fragment
+        android:id="@+id/map2"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
         android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".LocationDataActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/arrowback"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_width="248dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <EditText
-            android:layout_width="248dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/editText"
-            android:layout_weight="0.5"
-            android:inputType="textPersonName"
-            android:hint="Search Location" />
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="640dp"
+        android:layout_marginEnd="550dp"
+        android:layout_weight="0.5"
+        android:hint="Search Location"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        map:layout_constraintEnd_toEndOf="parent"
+        map:layout_constraintStart_toEndOf="@+id/map2"
+        map:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.5"
-            android:onClick="searchLocation"
-            android:text="Search" />
 
-    </LinearLayout>
 
-</fragment>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="300dp"
+        android:layout_marginTop="640dp"
+        android:layout_weight="0.5"
+        android:onClick="searchLocation"
+        android:text="Search"
+        map:layout_constraintEnd_toStartOf="@+id/map2"
+        map:layout_constraintHorizontal_bias="0.0"
+        map:layout_constraintStart_toStartOf="parent"
+        map:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

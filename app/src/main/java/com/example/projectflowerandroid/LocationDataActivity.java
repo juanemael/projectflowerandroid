@@ -1,5 +1,6 @@
 package com.example.projectflowerandroid;
 
+import android.content.Intent;
 import android.location.Address;
 import android.location.Geocoder;
 import android.os.Build;
@@ -22,6 +23,7 @@ import android.content.pm.PackageManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import androidx.core.content.ContextCompat;
@@ -49,6 +51,19 @@ public class LocationDataActivity extends FragmentActivity implements OnMapReady
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_data);
+
+        ImageView backButton = findViewById(R.id.backButton);
+        Intent intent = new Intent(this, MainActivity2.class);
+//        backButton.setImageResource(R.drawable.arrowback);
+
+        backButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(intent);
+            }
+        });
+
+
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map2);
