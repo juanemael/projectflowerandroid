@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainActivity2 extends AppCompatActivity {
+public class MainActivity2 extends NavigationTemplateActivity {
 
     private GridView gridViewFlower;
     private FlowerCatalogAdapter flowerAdapter;
