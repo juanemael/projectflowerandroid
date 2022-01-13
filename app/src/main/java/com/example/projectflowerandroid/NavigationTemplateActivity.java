@@ -43,7 +43,7 @@ public abstract class NavigationTemplateActivity extends AppCompatActivity {
                         overridePendingTransition(0, 0);
                         break;
                     case R.id.profile_page:
-                        Intent i4 = new Intent(NavigationTemplateActivity.this, LocationDataActivity.class);
+                        Intent i4 = new Intent(NavigationTemplateActivity.this, ProfileActivity.class);
                         startActivity(i4);
                         NavigationTemplateActivity.this.finish();
                         overridePendingTransition(0, 0);

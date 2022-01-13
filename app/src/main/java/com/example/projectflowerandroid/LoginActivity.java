@@ -33,7 +33,7 @@ public class LoginActivity extends AppCompatActivity {
         btn_lregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity2.class);
                 startActivity(intent);
             }
         });
@@ -58,12 +58,7 @@ public class LoginActivity extends AppCompatActivity {
     }
 
     private void moveToLoginActivity(String username){
-        Intent intent = new Intent(this, LoginResultActivity.class);
-
-        Bundle extras = new Bundle();
-        extras.putString("username", username);
-
-        intent.putExtras(extras);
+        Intent intent = new Intent(this, MainActivity2.class);
 
         startActivity(intent);
     }

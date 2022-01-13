@@ -10,7 +10,7 @@
         <entry key="app/src/main/res/layout/activity_flower_catalog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_google_maps.xml" value="0.1381340579710145" />
         <entry key="app/src/main/res/layout/activity_google_sign_in.xml" value="0.1381340579710145" />
-        <entry key="app/src/main/res/layout/activity_location_data.xml" value="0.23125" />
+        <entry key="app/src/main/res/layout/activity_location_data.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.1140625" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main2.xml" value="0.1" />
@@ -19,6 +19,7 @@
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.14447463768115942" />
         <entry key="app/src/main/res/layout/activity_maps2.xml" value="0.11354166666666667" />
         <entry key="app/src/main/res/layout/activity_navigation_home.xml" value="0.15070921985815602" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.32453861435275505" />
         <entry key="app/src/main/res/layout/activity_slider_adapter.xml" value="0.12395833333333334" />
         <entry key="app/src/main/res/layout/button_navigation_menu.xml" value="0.15070921985815602" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/wedding_flower.xml" value="0.18385416666666668" />
