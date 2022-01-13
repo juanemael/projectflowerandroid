@@ -36,6 +36,18 @@ public abstract class NavigationTemplateActivity extends AppCompatActivity {
                         NavigationTemplateActivity.this.finish();
                         overridePendingTransition(0, 0);
                         break;
+                    case R.id.explore_page:
+                        Intent i3 = new Intent(NavigationTemplateActivity.this, LocationDataActivity.class);
+                        startActivity(i3);
+                        NavigationTemplateActivity.this.finish();
+                        overridePendingTransition(0, 0);
+                        break;
+                    case R.id.profile_page:
+                        Intent i4 = new Intent(NavigationTemplateActivity.this, LocationDataActivity.class);
+                        startActivity(i4);
+                        NavigationTemplateActivity.this.finish();
+                        overridePendingTransition(0, 0);
+                        break;
                 }
 
 //                Toast.makeText(NavigationTemplateActivity.this, "id " + id, Toast.LENGTH_SHORT).show();
