@@ -1,6 +1,8 @@
 package com.example.projectflowerandroid;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.util.Log;
@@ -34,7 +36,7 @@ import java.util.ArrayList;
 public class LoginActivity extends AppCompatActivity {
     Button btn_lregister, btn_llogin;
     EditText et_lusername, et_lpassword;
-    SharedPreferences mPreferences;
+    SharedPreferences sp;
     ArrayList<UserModel> userModels = new ArrayList<>();
 
     //DatabaseHelper databaseHelper;
@@ -43,6 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        sp = getSharedPreferences("userData", Context.MODE_PRIVATE);
 
         //databaseHelper = new DatabaseHelper(this);
 
@@ -112,11 +115,14 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String username = et_lusername.getText().toString();
                 String password = et_lpassword.getText().toString();
-
+                SharedPreferences.Editor editor = sp.edit();
 
                 for (UserModel um: userModels) {
                     if(username.equals(um.getUsername()) && password.equals(um.getPassword())){
                         Log.d("MAIN_ACTIVITY", "PASSWORD IS CORRECT");
+                        editor.putString("username", um.getUsername());
+                        editor.putString("email", um.getEmail());
+                        editor.putString("phone", um.getPhone());
                         moveToLoginActivity(username);
                         Toast.makeText(LoginActivity.this, "Password is correct", Toast.LENGTH_SHORT).show();
                         finish();
