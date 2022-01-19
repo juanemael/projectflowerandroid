@@ -10,16 +10,16 @@
         android:id="@+id/shop_page"
         android:enabled="true"
         android:icon="@drawable/cart"
-        android:title="Home" />
+        android:title="Cart" />
 
     <item
         android:id="@+id/explore_page"
         android:enabled="true"
         android:icon="@drawable/search"
-        android:title="Home" />
+        android:title="Search" />
     <item
         android:id="@+id/profile_page"
         android:enabled="true"
         android:icon="@drawable/user"
-        android:title="Home" />
+        android:title="User" />
 </menu>
