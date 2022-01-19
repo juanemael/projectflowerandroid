@@ -11,6 +11,9 @@ import android.widget.Toast;
 
 import com.denzcoskun.imageslider.ImageSlider;
 import com.denzcoskun.imageslider.models.SlideModel;
+import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnimationType;
+import com.smarteist.autoimageslider.SliderAnimations;
+import com.smarteist.autoimageslider.SliderView;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -21,11 +24,25 @@ public class MainActivity2 extends NavigationTemplateActivity {
     private GridView gridViewFlower;
     private FlowerCatalogAdapter flowerAdapter;
     List<FlowerCatalog>  flowers = new ArrayList<FlowerCatalog>();
+    SliderView sliderView;
+    int[] images = {R.drawable.babyshowerflower,
+            R.drawable.graduationflower,
+            R.drawable.funeralflower,
+            R.drawable.weddingflower
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
+        sliderView = findViewById(R.id.image_slider);
+
+        SliderAdapter sliderAdapter = new SliderAdapter(images);
+        sliderView.setSliderAdapter(sliderAdapter);
+        sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
+        sliderView.setSliderTransformAnimation(SliderAnimations.DEPTHTRANSFORMATION);
+        sliderView.startAutoCycle();
 
 
 //        ImageSlider imageSlider = findViewById(R.id.image_slider);
