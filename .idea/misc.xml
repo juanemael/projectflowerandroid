@@ -5,30 +5,33 @@
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.1421875" />
         <entry key="..\:/Android_Project/semester7/project/projectflowerandroid/app/src/main/res/layout/activity_main_menu.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/email_small_icon.xml" value="0.1671875" />
+        <entry key="app/src/main/res/drawable/phone_small_icon.xml" value="0.1671875" />
+        <entry key="app/src/main/res/drawable/user_small_icon.xml" value="0.1671875" />
         <entry key="app/src/main/res/layout/activity_browse_support_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_flower_adapter.xml" value="0.16168478260869565" />
         <entry key="app/src/main/res/layout/activity_flower_catalog.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_google_maps.xml" value="0.1381340579710145" />
         <entry key="app/src/main/res/layout/activity_google_sign_in.xml" value="0.1381340579710145" />
         <entry key="app/src/main/res/layout/activity_location_data.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.1140625" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.16" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.16991027823622487" />
+        <entry key="app/src/main/res/layout/activity_main2.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_main_fragment.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_main_menu.xml" value="0.32443812569908204" />
         <entry key="app/src/main/res/layout/activity_maps.xml" value="0.14447463768115942" />
         <entry key="app/src/main/res/layout/activity_maps2.xml" value="0.11354166666666667" />
         <entry key="app/src/main/res/layout/activity_navigation_home.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.32453861435275505" />
+        <entry key="app/src/main/res/layout/activity_profile.xml" value="0.18" />
         <entry key="app/src/main/res/layout/activity_slider_adapter.xml" value="0.12395833333333334" />
         <entry key="app/src/main/res/layout/button_navigation_menu.xml" value="0.15070921985815602" />
-        <entry key="app/src/main/res/layout/slider_item.xml" value="0.1526268115942029" />
+        <entry key="app/src/main/res/menu/bottom_navigation_menu.xml" value="0.1" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/wedding_flower.xml" value="0.18385416666666668" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/wedding_flower_round.xml" value="0.18385416666666668" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">
