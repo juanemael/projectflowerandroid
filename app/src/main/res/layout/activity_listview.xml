@@ -5,6 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="200dp">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/activity_list_view_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
     <ImageView
         android:id="@+id/activity_listview_holder_image_view"
         android:layout_weight="1"

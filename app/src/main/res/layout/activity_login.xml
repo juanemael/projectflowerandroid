@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="@drawable/start_image">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:context=".LoginActivity">
 
         <EditText
@@ -18,8 +19,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="120dp"
             android:ems="10"
+            android:hint="@string/username"
             android:inputType="text"
-            android:hint="Username" />
+            android:minHeight="48dp" />
 
         <EditText
             android:id="@+id/et_lpassword"
@@ -29,8 +31,9 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="50dp"
             android:ems="10"
+            android:hint="@string/password"
             android:inputType="textPassword"
-            android:hint="Password" />
+            android:minHeight="48dp" />
 
         <Button
             android:id="@+id/btn_llogin"
