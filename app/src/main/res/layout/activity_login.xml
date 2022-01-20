@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true"
     android:background="@drawable/start_image">
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,6 +21,7 @@
             android:layout_marginTop="120dp"
             android:ems="10"
             android:hint="@string/username"
+            android:textColorHint="@color/black"
             android:inputType="text"
             android:minHeight="48dp" />
 
@@ -32,6 +34,7 @@
             android:layout_marginTop="50dp"
             android:ems="10"
             android:hint="@string/password"
+            android:textColorHint="@color/black"
             android:inputType="textPassword"
             android:minHeight="48dp" />
 
