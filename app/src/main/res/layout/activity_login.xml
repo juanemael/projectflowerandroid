@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fillViewport="true"
-    android:background="@drawable/start_image">
+    android:background="@drawable/start_image"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over">
 
     <RelativeLayout
         android:layout_width="match_parent"
